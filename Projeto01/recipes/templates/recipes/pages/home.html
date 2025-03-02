@@ -1,25 +1,41 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
-    <title>Home</title>
-</head>
+{% include "recipes/partials/head.html" %}
 <body>
-    <header class="main-header-contaniner">
-        <div class="main-hedear container">
-            <h1>
-                <a href="">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Recipes {{ name }}</span>
-                </a>            
-            </h1>
-        </div>        
-    </header>
+    {% include "recipes/partials/header.html" %}
+    {% include "recipes/partials/search.html" %}
+
+    <main class="main-content-container">
+        <div class="main-content main-content-list container">
+          <div class="recipe recipe-list-item">
+            <div class="recipe-cover">
+                <img src="https://placehold.co/1280x720/4d86c4/4d86c4/png" alt="">
+            </div>
+            <div class="recipe-title-container">
+                <h2 class="recipe-title">Lorem ipsum dolor sit amet consectetu.</h2>
+            </div>
+            <div class="recipe-author">
+                <span class="recipe-author-item">
+                    <i classs="fa-solid fa-user"></i>   
+                    Márcio Alencar
+                </span>                
+                <span class="recipe-author-item">
+                    <i classs="fa-solid fa-calendar-alt"></i>   
+                    23/10/2021 às 11:23
+                </span>
+                <span class="recipe-author-item">
+                    <a href="">
+                        <i classs="fa-solid fa-layer-group"></i>   
+                        <span>Café da Manhã</span>
+                    </a>
+                </span>
+            </div>
+
+            <div class="recipe-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iusto ipsa dolor doloribus necessitatibus asperiores debitis omnis ipsam porro quis. Incidunt explicabo aliquid quae officia deserunt fuga, doloremque doloribus reiciendis.</p>
+            </div>
+
+          </div>
+        </div>
+    </main>
+
 </body>
 </html>
