@@ -1,41 +1,15 @@
-{% include "recipes/partials/head.html" %}
-<body>
-    {% include "recipes/partials/header.html" %}
-    {% include "recipes/partials/search.html" %}
+{% extends "global/base.html" %}
 
-    <main class="main-content-container">
-        <div class="main-content main-content-list container">
-          <div class="recipe recipe-list-item">
-            <div class="recipe-cover">
-                <img src="https://placehold.co/1280x720/4d86c4/4d86c4/png" alt="">
-            </div>
-            <div class="recipe-title-container">
-                <h2 class="recipe-title">Lorem ipsum dolor sit amet consectetu.</h2>
-            </div>
-            <div class="recipe-author">
-                <span class="recipe-author-item">
-                    <i classs="fa-solid fa-user"></i>   
-                    Márcio Alencar
-                </span>                
-                <span class="recipe-author-item">
-                    <i classs="fa-solid fa-calendar-alt"></i>   
-                    23/10/2021 às 11:23
-                </span>
-                <span class="recipe-author-item">
-                    <a href="">
-                        <i classs="fa-solid fa-layer-group"></i>   
-                        <span>Café da Manhã</span>
-                    </a>
-                </span>
-            </div>
+{% block title %} Home | {% endblock title %}
 
-            <div class="recipe-content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iusto ipsa dolor doloribus necessitatibus asperiores debitis omnis ipsam porro quis. Incidunt explicabo aliquid quae officia deserunt fuga, doloremque doloribus reiciendis.</p>
-            </div>
+{% block content %}
+<div class="main-content main-content-list container">
+    {% for recipe in recipes %}
+        {% include "recipes/partials/recipe.html" %}          
+    {% endfor %}
 
-          </div>
-        </div>
-    </main>
 
-</body>
-</html>
+</div>
+
+{% endblock content %}
+
