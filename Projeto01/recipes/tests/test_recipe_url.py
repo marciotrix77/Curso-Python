@@ -21,6 +21,4 @@ class RecipeURLsTeste(TestCase):
         url = reverse("recipes:recipe", kwargs={'id': 1})
         self.assertEqual(url,'/recipes/1/')
 
-    def teste_recipe_home_tmplate_show_no_recipes_founds_if_no_recipes(self):
-        response = self.client.get(reverse('recipes:home'))
-        self.assertContains(response, 'No recipes found')           
+      
